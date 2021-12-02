@@ -9,7 +9,7 @@
 # 알고리즘 참고 링크
 
 - [취업을 위한 코딩테스트 공부방법](https://covenant.tistory.com/220)
-- [나의 비효율적이지만 효율적인 알고리즘 공부법 (코딩테스트를 준비하는 이들에게)]https://zoomkoding.github.io/%ED%9A%8C%EA%B3%A0/2019/12/05/how-to-algo.html)
+- [나의 비효율적이지만 효율적인 알고리즘 공부법 (코딩테스트를 준비하는 이들에게)](https://zoomkoding.github.io/%ED%9A%8C%EA%B3%A0/2019/12/05/how-to-algo.html)
 - [[Algorithm] 알고리즘 공부 시작 방법 및 순서](https://blog.yena.io/studynote/2018/11/14/Algorithm-Basic.html)
 - [삼성 상시 SW 역량테스트에 관하여 - A형 B형 C형](https://royhelen.tistory.com/37)
 - [알고리즘 공부 방법/순서](https://baactree.tistory.com/14)
