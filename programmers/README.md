@@ -1,4 +1,4 @@
-# ¹®Á¦ ¸µÅ©
+# ë¬¸ì œ ë§í¬
 
 - https://programmers.co.kr/learn/courses/30
 - https://programmers.co.kr/learn/challenges
