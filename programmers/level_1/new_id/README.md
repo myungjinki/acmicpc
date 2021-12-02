@@ -1,1 +1,1 @@
-# [½Å±Ô ¾ÆÀÌµğ ÃßÃµ](https://programmers.co.kr/learn/courses/30/lessons/72410)
+# [ì‹ ê·œ ì•„ì´ë”” ì¶”ì²œ](https://programmers.co.kr/learn/courses/30/lessons/72410)
