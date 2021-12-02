@@ -21,7 +21,6 @@
 - [취업을 위한 자료구조&알고리즘 공부하기](https://velog.io/@dadumvu/%EC%B7%A8%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0)
 - [JavaScript로 코딩테스트 준비하기(0) - 왜?](https://velog.io/@bigsaigon333/Javascript%EB%A1%9C-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B01)
 - [[Algorithm] Algorithm 문제에 접근하는 방법](https://ooeunz.tistory.com/27)
-- []()
 
 # 책
 
