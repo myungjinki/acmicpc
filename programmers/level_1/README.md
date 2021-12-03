@@ -1,6 +1,8 @@
-# ¸ñ·Ï
+# ëª©ë¡
 
-1. [·Î¶ÇÀÇ ÃÖ°í ¼øÀ§¿Í ÃÖÀú ¼øÀ§](https://programmers.co.kr/learn/courses/30/lessons/77484)
-2. [½Å±Ô ¾ÆÀÌµğ ÃßÃµ](https://programmers.co.kr/learn/courses/30/lessons/72410)
-3. [¼ıÀÚ ¹®ÀÚ¿­°ú ¿µ´Ü¾î](https://programmers.co.kr/learn/courses/30/lessons/81301)
-4. [[Ä«Ä«¿À ÀÎÅÏ] Å°ÆĞµå ´©¸£±â](https://programmers.co.kr/learn/courses/30/lessons/67256)
+1. [ë¡œë˜ì˜ ìµœê³  ìˆœìœ„ì™€ ìµœì € ìˆœìœ„](https://programmers.co.kr/learn/courses/30/lessons/77484)
+2. [ì‹ ê·œ ì•„ì´ë”” ì¶”ì²œ](https://programmers.co.kr/learn/courses/30/lessons/72410)
+3. [ìˆ«ì ë¬¸ìì—´ê³¼ ì˜ë‹¨ì–´](https://programmers.co.kr/learn/courses/30/lessons/81301)
+4. [[ì¹´ì¹´ì˜¤ ì¸í„´] í‚¤íŒ¨ë“œ ëˆ„ë¥´ê¸°](https://programmers.co.kr/learn/courses/30/lessons/67256)
+5. [í¬ë ˆì¸ ì¸í˜•ë½‘ê¸° ê²Œì„](https://programmers.co.kr/learn/courses/30/lessons/64061)
+6. [ì—†ëŠ” ìˆ«ì ë”í•˜ê¸°](https://programmers.co.kr/learn/courses/30/lessons/86051)
