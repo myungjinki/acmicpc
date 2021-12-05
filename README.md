@@ -16,6 +16,16 @@
 - [swexpertacademy](https://swexpertacademy.com/main/main.do)
 - [코딩 테스트 준비 - 기초](https://code.plus/course/51)
 
+# 책
+
+- Do it! 자료구조와 함께 배우는 알고리즘 입문
+- 모두의 알고리즘 with 파이썬 컴퓨팅 사고를 위한 기초 알고리즘
+- 알고리즘 문제 해결 전략 세트 프로그래밍 대회에서 배우는,전2권
+
+# 강의
+
+- 유튜브
+
 # 알고리즘 참고 링크
 
 - [취업을 위한 코딩테스트 공부방법](https://covenant.tistory.com/220)
@@ -32,8 +42,3 @@
 - [JavaScript로 코딩테스트 준비하기(0) - 왜?](https://velog.io/@bigsaigon333/Javascript%EB%A1%9C-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B01)
 - [[Algorithm] Algorithm 문제에 접근하는 방법](https://ooeunz.tistory.com/27)
 
-# 책
-
-- Do it! 자료구조와 함께 배우는 알고리즘 입문
-- 모두의 알고리즘 with 파이썬 컴퓨팅 사고를 위한 기초 알고리즘
-- 알고리즘 문제 해결 전략 세트 프로그래밍 대회에서 배우는,전2권
