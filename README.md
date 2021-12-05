@@ -4,10 +4,12 @@
 
 # 일지
 
-| 날짜       | 문제                                                                                     | 문제                                                                                    |
-| ---------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| 2021-12-02 | [로또의 최고 순위와 최저 순위](https://programmers.co.kr/learn/courses/30/lessons/77484) | [신규 아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410)            |
-| 2021-12-03 | [숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301)         | [[카카오 인턴] 키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
+| 날짜       | 문제                                                                                                     |
+| ---------- | -------------------------------------------------------------------------------------------------------- |
+| 2021-12-02 | [로또의 최고 순위와 최저 순위](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/lottos) |
+| 2021-12-02 | [신규 아이디 추천](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/new_id)             |
+| 2021-12-03 | [숫자 문자열과 영단어](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/voca)           |
+| 2021-12-03 | [[카카오 인턴] 키패드 누르기](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/keypad)  |
 
 # 문제 사이트
 
