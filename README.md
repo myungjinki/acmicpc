@@ -6,8 +6,8 @@
 
 | 날짜       | 문제                                                                                                     |
 | ---------- | -------------------------------------------------------------------------------------------------------- |
-| 2021-12-03 | [없는 숫자 더하기](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/sumNumber)          |
-| 2021-12-03 | [크레인 인형뽑기 게임](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/crain)          |
+| 2021-12-06 | [없는 숫자 더하기](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/sumNumber)          |
+| 2021-12-06 | [크레인 인형뽑기 게임](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/crain)          |
 | 2021-12-03 | [[카카오 인턴] 키패드 누르기](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/keypad)  |
 | 2021-12-03 | [숫자 문자열과 영단어](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/voca)           |
 | 2021-12-02 | [신규 아이디 추천](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/new_id)             |
