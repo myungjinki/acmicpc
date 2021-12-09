@@ -6,6 +6,9 @@
 
 | 날짜       | 문제                                                                                                     |
 | ---------- | -------------------------------------------------------------------------------------------------------- |
+| 2021-12-09 | [폰켓몬](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/phonekemon)                   |
+| 2021-12-09 | [체육복](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/training)                     |
+| 2021-12-09 | [모의고사](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/test)                       |
 | 2021-12-08 | [K번째수](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/numberKth)                   |
 | 2021-12-08 | [완주하지 못한 선수](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/player)           |
 | 2021-12-08 | [소수 만들기](https://github.com/42-mki/algorithm/tree/main/programmers/level_1/prime)                   |
