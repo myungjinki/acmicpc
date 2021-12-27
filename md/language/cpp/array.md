@@ -1,7 +1,3 @@
-# Contents
-
-- Array
-
 # Array Initialization
 
 배열을 초기화 하는 방법에 대해서는 [cppreference](https://en.cppreference.com/w/c/language/array_initialization)에 자세히 나와있습니다.
