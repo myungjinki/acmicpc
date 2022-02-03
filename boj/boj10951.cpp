@@ -1,14 +1,20 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-int main(void)
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int A, B;
-    while (cin >> A >> B)
-        cout << A + B << "\n";
-    return 0;
+int main() {
+  int x, y;
+  vector<int> sum;
+  while (1)
+  {
+    cin >> x >> y;
+    if (cin.eof()) break ;
+    sum.push_back(x + y);
+  }
+  vector<int>::iterator iter;
+  for (iter = sum.begin(); iter != sum.end(); iter++) {
+    cout << *iter << "\n";
+  }
 }
