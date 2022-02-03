@@ -8,5 +8,5 @@ int main(void)
     cout << " )  ( ')\n";
     cout << "(  /  )\n";
     cout << " \\(__)|\n";
-    return 0;
+    return (0);
 }
