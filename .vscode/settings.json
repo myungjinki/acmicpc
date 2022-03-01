@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "set": "cpp"
+        "set": "cpp",
+        "queue": "cpp",
+        "utility": "cpp",
+        "ios": "cpp"
     }
 }
