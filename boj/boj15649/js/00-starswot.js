@@ -1,26 +1,24 @@
-for (let i = 1; i < 4; i++) {
-    const [N, M] = require('fs').readFileSync(`../input/${i}.txt`).toString().trim().split(' ').map(Number);
-    
-    let answer = '';
-    let temp = [];
-    let visited = Array(N + 1).fill(false);
-    
-    function dfs(start) {
-        if (start === M) {
-            answer += `${temp.join(' ')}\n`;
-        }
-        for (let i = 1; i <= N; i++) {
-            if (visited[i] === true)
-                continue ;
+// const [N, M] = require('fs').readFileSync('../input/2.txt').toString().split(' ').map(e => +e);
+const [N, M] = require('fs').readFileSync('/dev/stdin').toString().split(' ').map(e => +e);
+
+let answer = '';
+let visited = Array(N + 1).fill(false);
+
+function solution(visited, current, targetLength) {
+    if (current.length === targetLength) {
+        answer += current.join(' ') + '\n';
+        return ;
+    }
+    for (let i = 1; i < visited.length; i++) {
+        if (visited[i] === false) {
+            current.push(i);
             visited[i] = true;
-            temp.push(i);
-            dfs(start + 1);
-            temp.pop();
+            solution(visited, current, targetLength);
+            current.pop();
             visited[i] = false;
         }
     }
-    
-    dfs(0);
-    console.log(answer);
 }
 
+solution(visited, [], M);
+console.log(answer.trim());
