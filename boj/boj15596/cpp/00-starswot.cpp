@@ -2,10 +2,8 @@
 
 long long sum(std::vector<int> &a)
 {
-    long long sum = 0;
+    long long ans = 0;
     for (auto it = a.begin(); it != a.end(); it++)
-    {
-        sum += *it;
-    }
-    return sum;
+        ans += *it;
+    return ans;
 }
