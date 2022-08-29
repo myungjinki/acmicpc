@@ -1,0 +1,23 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newmki/algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newmki/algorithm/issues"
+  },
+  "homepage": "https://github.com/newmki/algorithm#readme",
+  "dependencies": {
+    "@types/node": "^18.7.13",
+    "node": "^16.17.0"
+  }
+}
