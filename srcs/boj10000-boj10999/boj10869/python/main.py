@@ -1,5 +1,3 @@
-import math
-
 g_input = input().split(" ")
 a, b = [int(e) for e in g_input]
-print(a + b, a - b, a * b, math.trunc(a / b), a % b, sep="\n")
+print(a + b, a - b, a * b, int(a / b), a % b, sep="\n")
