@@ -1,11 +1,30 @@
 {
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}\\app.js"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "debugpy",
+      "name": "Python Launch",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": ["<", "${fileDirname}/input/1.txt"]
+    },
+    {
+      "type": "node",
+      "name": "Node Launch",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": ["<", "${fileDirname}/input/1.txt"],
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": "${file}",
+      "projectName": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": ["<", "${fileDirname}/input/1.txt"]
+    }
+  ]
 }

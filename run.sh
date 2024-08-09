@@ -6,7 +6,7 @@ create_directory() {
     mkdir -p "./src/$number"
     cd "./src/$number" || exit
     printf "# Link\n\nhttps://www.acmicpc.net/problem/$number\n\n# Python\n\n# JavaScript\n\n# C\n\n# C++\n\n# Java\n" > README.md
-    touch main.c main.cpp Main.java app.js main.py
+    touch main.c main.cpp Main$number.java app.js main.py
     mkdir -p "input"
     touch "input/1.txt"
     echo "Directory 'src/$number' created with main.c main.cpp, Main.java, app.js, main.py, README.md, and input/1.txt inside."
