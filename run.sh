@@ -5,7 +5,7 @@ create_directory() {
     local number=$1
     mkdir -p "./srcs/$number"
     cd "./srcs/$number" || exit
-    echo "https://www.acmicpc.net/problem/$number" > README.md
+    printf "#Link\n\nhttps://www.acmicpc.net/problem/$number\n" > README.md
     touch main.cpp Main.java main.js main.py
     mkdir -p "input"
     touch "input/1.txt"
