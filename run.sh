@@ -3,23 +3,23 @@
 # Function to create directory and files
 create_directory() {
     local number=$1
-    mkdir -p "./srcs/$number"
-    cd "./srcs/$number" || exit
+    mkdir -p "./src/$number"
+    cd "./src/$number" || exit
     printf "# Link\n\nhttps://www.acmicpc.net/problem/$number\n\n# Python\n\n# JavaScript\n\n# C\n\n# C++\n\n# Java\n" > README.md
     touch main.c main.cpp Main.java app.js main.py
     mkdir -p "input"
     touch "input/1.txt"
-    echo "Directory 'srcs/$number' created with main.c main.cpp, Main.java, app.js, main.py, README.md, and input/1.txt inside."
+    echo "Directory 'src/$number' created with main.c main.cpp, Main.java, app.js, main.py, README.md, and input/1.txt inside."
 }
 
 # Function to run Python with input files
 run_python() {
     local number=$1
-    cd "./srcs/$number" || exit
+    cd "./src/$number" || exit
     
     # Check if main.py exists
     if [ ! -f "main.py" ]; then
-        echo "Error: main.py not found in srcs/$number"
+        echo "Error: main.py not found in src/$number"
         exit 1
     fi
     
@@ -28,7 +28,7 @@ run_python() {
     
     # Check if there are any input files
     if [ ${#input_files[@]} -eq 0 ]; then
-        echo "No input files found in srcs/$number/input/"
+        echo "No input files found in src/$number/input/"
         exit 1
     fi
     
