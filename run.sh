@@ -5,11 +5,11 @@ create_directory() {
     local number=$1
     mkdir -p "./srcs/$number"
     cd "./srcs/$number" || exit
-    printf "#Link\n\nhttps://www.acmicpc.net/problem/$number\n" > README.md
-    touch main.cpp Main.java main.js main.py
+    printf "# Link\n\nhttps://www.acmicpc.net/problem/$number\n\n# Python\n\n# JavaScript\n\n# C\n\n# C++\n\n# Java\n" > README.md
+    touch main.c main.cpp Main.java app.js main.py
     mkdir -p "input"
     touch "input/1.txt"
-    echo "Directory 'srcs/$number' created with main.cpp, Main.java, main.js, main.py, README.md, and input/1.txt inside."
+    echo "Directory 'srcs/$number' created with main.c main.cpp, Main.java, app.js, main.py, README.md, and input/1.txt inside."
 }
 
 # Function to run Python with input files
