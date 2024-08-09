@@ -7,6 +7,6 @@ int main(void)
   cin.tie(0);
   int a, b;
   cin >> a >> b;
-  cout << a << b;
+  cout << a + b;
   return 0;
 }

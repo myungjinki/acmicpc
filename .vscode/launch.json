@@ -25,6 +25,19 @@
       "projectName": "${fileDirname}",
       "console": "integratedTerminal",
       "args": ["<", "${fileDirname}/input/1.txt"]
+    },
+    {
+      "name": "C/C++: clang++ build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": ["<", "${fileDirname}/input/1.txt"],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: clang++ build active file"
     }
   ]
 }
