@@ -1,12 +1,15 @@
-# JavaScript
-
-node_modules
-package-lock.json
-
 # C/C++
 *.dSYM
 main
 a.out
+
+# Java
+*.class
+
+# JavaScript
+
+node_modules
+package-lock.json
 
 # C#
 *.generated.sln

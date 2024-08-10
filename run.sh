@@ -112,6 +112,26 @@ run_dotnet() {
     cat "${input_files[@]}" | dotnet run
 }
 
+# Function to compile and run Java code
+run_java() {
+    local number=$1
+
+    navigate_to_dir "$number"
+
+    # Compile the Java file
+    javac "Main$number.java" || { echo "Error: Compilation failed"; exit 1; }
+
+    # Find input files
+    input_files=(input/*.txt)
+    if [ ${#input_files[@]} -eq 0 ]; then
+        echo "No input files found in src/$number/input/"
+        exit 1
+    fi
+
+    # Run the Java class with all input files
+    java "Main$number" < "${input_files[@]}"
+}
+
 # Main script logic
 if [ $# -ne 2 ]; then
     echo "Usage: $0 <number> [make|py|js|c|cpp|cs|java|rs]"
@@ -141,8 +161,7 @@ case $command in
         run_dotnet "$number"
         ;;
     java)
-        run_program "$number" "javac" "Main$number.java" "Main$number"
-        java Main$number < "${input_files[@]}"
+        run_java "$number"
         ;;
     rs)
         run_program "$number" "rustc" "main.rs" "main"
