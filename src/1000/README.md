@@ -2,14 +2,18 @@
 
 https://www.acmicpc.net/problem/1000
 
-# Python
-
-# JavaScript
-
 # C
 
-# C++
+# CPP
 
-# Java
+# CS
+
+# JAVA
 
 https://st-lab.tistory.com/12
+
+# JS
+
+# PY
+
+# RS

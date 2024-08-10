@@ -3,141 +3,152 @@
 # Function to create directory and files
 create_directory() {
     local number=$1
-    mkdir -p "./src/$number"
+    local languages=("c" "cpp" "cs" "java" "js" "py" "rs")
+    local extensions=("c" "cpp" "cs" "java" "js" "py" "rs")
+    local filenames=("main.c" "main.cpp" "Program.cs" "Main$number.java" "app.js" "main.py" "main.rs")
+
+    mkdir -p "./src/$number/input"
     cd "./src/$number" || exit
-    printf "# Link\n\nhttps://www.acmicpc.net/problem/$number\n\n# Python\n\n# JavaScript\n\n# C\n\n# C++\n\n# Java\n" > README.md
-    touch main.c main.cpp Main"$number".java app.js main.py
-    mkdir -p "input"
+
+    printf "# Link\n\nhttps://www.acmicpc.net/problem/$number\n" > README.md
+    for lang in "${languages[@]}"; do
+        printf "\n# %s\n\n" "$(echo $lang | tr '[:lower:]' '[:upper:]')" >> README.md
+    done
+
+    for i in "${!extensions[@]}"; do
+        if [ "${extensions[$i]}" == "cs" ]; then
+            dotnet new console -n "Program" -o . > /dev/null
+        else
+            touch "${filenames[$i]}"
+        fi
+    done
+
     touch "input/1.txt"
-    echo "Directory 'src/$number' created with main.c, main.cpp, Main.java, app.js, main.py, README.md, and input/1.txt inside."
+    echo "Directory 'src/$number' created with main files, README.md, and input/1.txt inside."
 }
 
-# Function to run Python with input files
-run_python() {
+# Function to navigate to the problem directory
+navigate_to_dir() {
     local number=$1
-    cd "./src/$number" || exit
-    
-    # Check if main.py exists
-    if [ ! -f "main.py" ]; then
-        echo "Error: main.py not found in src/$number"
+    cd "./src/$number" || { echo "Error: Directory src/$number not found"; exit 1; }
+}
+
+# Function to run a program with input files
+run_program() {
+    local number=$1
+    local cmd=$2
+    local source_file=$3
+    local binary=$4
+
+    navigate_to_dir "$number"
+
+    # Check if the source file exists
+    if [ ! -f "$source_file" ]; then
+        echo "Error: $source_file not found in src/$number"
         exit 1
     fi
-    
-    # Find all input files
+
+    # Find input files
     input_files=(input/*.txt)
-    
-    # Check if there are any input files
     if [ ${#input_files[@]} -eq 0 ]; then
         echo "No input files found in src/$number/input/"
         exit 1
     fi
-    
-    # Run Python with all input files
-    cat "${input_files[@]}" | python main.py
+
+    # Compile if necessary
+    if [ -n "$cmd" ]; then
+        $cmd "$source_file" -o "$binary" || { echo "Error: Compilation failed"; exit 1; }
+    fi
+
+    # Run the program with all input files
+    cat "${input_files[@]}" | ./$binary
 }
 
-# Function to run JavaScript with input files
-run_js() {
+# Function to handle running interpreted languages (Python, JS)
+run_interpreter() {
     local number=$1
-    cd "./src/$number" || exit
-    
-    # Check if app.js exists
-    if [ ! -f "app.js" ]; then
-        echo "Error: app.js not found in src/$number"
+    local interpreter=$2
+    local source_file=$3
+
+    navigate_to_dir "$number"
+
+    # Check if the source file exists
+    if [ ! -f "$source_file" ]; then
+        echo "Error: $source_file not found in src/$number"
         exit 1
     fi
-    
-    # Find all input files
+
+    # Find input files
     input_files=(input/*.txt)
-    
-    # Check if there are any input files
     if [ ${#input_files[@]} -eq 0 ]; then
         echo "No input files found in src/$number/input/"
         exit 1
     fi
-    
-    # Run JavaScript with all input files
-    cat "${input_files[@]}" | node app.js
+
+    # Run the interpreter with all input files
+    cat "${input_files[@]}" | $interpreter "$source_file"
 }
 
-# Function to run C with input files
-run_c() {
+# Function to run C# project using dotnet
+run_dotnet() {
     local number=$1
-    cd "./src/$number" || exit
-    
-    # Check if main.c exists
-    if [ ! -f "main.c" ]; then
-        echo "Error: main.c not found in src/$number"
+
+    navigate_to_dir "$number"
+
+    # Check if the project exists
+    if [ ! -f "Program.csproj" ]; then
+        echo "Error: Program.csproj not found in src/$number"
         exit 1
     fi
-    
-    # Compile C file
-    clang -o main main.c
-    
-    # Find all input files
+
+    # Find input files
     input_files=(input/*.txt)
-    
-    # Check if there are any input files
     if [ ${#input_files[@]} -eq 0 ]; then
         echo "No input files found in src/$number/input/"
         exit 1
     fi
-    
-    # Run compiled C program with all input files
-    cat "${input_files[@]}" | ./main
-}
 
-# Function to run C++ with input files
-run_cpp() {
-    local number=$1
-    cd "./src/$number" || exit
-    
-    # Check if main.cpp exists
-    if [ ! -f "main.cpp" ]; then
-        echo "Error: main.cpp not found in src/$number"
-        exit 1
-    fi
-    
-    # Compile C++ file
-    clang++ -o main main.cpp
-    
-    # Find all input files
-    input_files=(input/*.txt)
-    
-    # Check if there are any input files
-    if [ ${#input_files[@]} -eq 0 ]; then
-        echo "No input files found in src/$number/input/"
-        exit 1
-    fi
-    
-    # Run compiled C++ program with all input files
-    cat "${input_files[@]}" | ./main
+    # Run the dotnet project with all input files
+    cat "${input_files[@]}" | dotnet run
 }
 
 # Main script logic
 if [ $# -ne 2 ]; then
-    echo "Usage: $0 [make|python|js|c|cpp] <number>"
+    echo "Usage: $0 <number> [make|py|js|c|cpp|cs|java|rs]"
     exit 1
 fi
 
-case $1 in
+number=$1
+command=$2
+
+case $command in
     make)
-        create_directory "$2"
+        create_directory "$number"
         ;;
-    python)
-        run_python "$2"
+    py)
+        run_interpreter "$number" "python" "main.py"
         ;;
     js)
-        run_js "$2"
+        run_interpreter "$number" "node" "app.js"
         ;;
     c)
-        run_c "$2"
+        run_program "$number" "clang" "main.c" "main"
         ;;
     cpp)
-        run_cpp "$2"
+        run_program "$number" "clang++" "main.cpp" "main"
+        ;;
+    cs)
+        run_dotnet "$number"
+        ;;
+    java)
+        run_program "$number" "javac" "Main$number.java" "Main$number"
+        java Main$number < "${input_files[@]}"
+        ;;
+    rs)
+        run_program "$number" "rustc" "main.rs" "main"
         ;;
     *)
-        echo "Invalid command. Use 'make', 'python', 'js', 'c', or 'cpp'."
+        echo "Invalid command. Use 'make', 'py', 'js', 'c', 'cpp', 'cs', 'java', or 'rs'."
         exit 1
         ;;
 esac

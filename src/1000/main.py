@@ -1,3 +1,4 @@
-seq = [int(e) for e in input().split(" ")]
-answer = sum(seq)
-print(answer)
+from sys import stdin
+
+a, b = [int(num) for num in stdin.readline().split()]
+print(a + b)

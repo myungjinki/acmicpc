@@ -1,6 +1,20 @@
+# JavaScript
+
 node_modules
 package-lock.json
-Info.plist
+
+# C/C++
 *.dSYM
 main
 a.out
+
+# C#
+*.generated.sln
+*.csproj
+obj
+bin
+
+# macOS
+
+Info.plist
+.DS_Store
