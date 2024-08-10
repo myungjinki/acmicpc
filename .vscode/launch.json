@@ -1,6 +1,13 @@
 {
   "configurations": [
     {
+      "type": "java",
+      "name": "Main1000",
+      "request": "launch",
+      "mainClass": "Main1000",
+      "projectName": "acmicpc_f0d7b559"
+    },
+    {
       "type": "debugpy",
       "name": "Python Launch",
       "request": "launch",
